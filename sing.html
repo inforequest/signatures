@@ -1,0 +1,221 @@
+<!doctype html>  
+<html lang="en-GB">  
+<head>  
+<meta charset="utf-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title>UK Merchant Capital | Email Signature Generator</title>  
+<meta name="theme-color" content="#0B1B28">  
+<link rel="preconnect" href="https://fonts.googleapis.com">  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">  
+<style>  
+:root{  
+  --navy:#0B1B28; --navy-2:#11263a; --ink:#0B1B28; --muted:#5f6d78;  
+  --line:#dbe4e6; --paper:#f5f9f8; --lime:#B7FF3C; --lime-dark:#8fd61a;  
+  --shadow:0 22px 70px rgba(11,27,40,.10);  
+}  
+*{box-sizing:border-box}  
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}  
+.container{max-width:1140px;margin:0 auto;padding:0 24px}  
+h1{font-family:Manrope,Arial,sans-serif;font-weight:800;letter-spacing:-.03em;margin:0}  
+h1 em{font-style:normal;color:var(--lime-dark)}  
+  
+/* Header */  
+.site-header{background:var(--navy);padding:18px 0}  
+.nav{display:flex;align-items:center;justify-content:space-between}  
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}  
+.brand-logo{width:130px;color:#fff}  
+.brand-divider{width:1px;height:34px;background:rgba(255,255,255,.25)}  
+.brand-name{font-family:Manrope;font-weight:800;font-size:13px;line-height:1.15;color:#fff;letter-spacing:.02em}  
+.text-link{color:var(--lime);font-size:14px;font-weight:700;text-decoration:none}  
+  
+/* Layout */  
+.sig-page{padding:60px 0 100px}  
+.sig-head{max-width:680px;margin-bottom:40px}  
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#45525c;margin-bottom:16px}  
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--lime-dark)}  
+.sig-head h1{font-size:clamp(34px,4.5vw,52px);line-height:1.02;margin-bottom:14px}  
+.sig-head p{color:var(--muted);font-size:17px;line-height:1.6;margin:0}  
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}  
+  
+/* Form */  
+.sig-form{background:#fff;border-radius:26px;padding:32px;box-shadow:var(--shadow);border:1px solid var(--line)}  
+.field{margin-bottom:15px}  
+.field label{display:block;font-size:11px;font-weight:800;color:#45525c;text-transform:uppercase;letter-spacing:1px}  
+.optional{text-transform:none;letter-spacing:0;font-weight:500;color:#89959d}  
+input{width:100%;border:1px solid #d6dfe2;background:#f8fbfa;border-radius:10px;margin-top:7px;padding:13px 14px;color:var(--ink);outline:none;font-size:14px;font-family:inherit;transition:border-color .2s,box-shadow .2s,background .2s}  
+input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(183,255,60,.35)}  
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}  
+  
+/* Buttons */  
+.button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 22px;border-radius:999px;font-size:14px;font-weight:700;font-family:inherit;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}  
+.button:hover{transform:translateY(-2px)}  
+.button span{font-size:17px}  
+.button-lime{background:var(--lime);color:var(--navy);box-shadow:0 12px 35px rgba(183,255,60,.18)}  
+.button-dark{background:var(--navy);color:#fff}  
+.button-small{min-height:44px;padding:0 18px}  
+  
+/* Preview */  
+.sig-preview-wrap{position:sticky;top:40px}  
+.sig-preview-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#45525c;margin-bottom:12px}  
+.sig-preview{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow);min-height:160px;overflow-x:auto}  
+.sig-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}  
+.copy-note{margin-top:12px;font-size:12px;color:var(--muted);line-height:1.6}  
+.copied-flash{margin-top:12px;background:#eefbd9;color:#2f4d12;padding:12px 14px;border-radius:12px;font-size:13px;font-weight:600}  
+.copied-flash[hidden]{display:none}  
+  
+/* Signature preview styling (mirrors the inline styles in generated markup) */  
+.ukmc-sig{font-family:Arial,Helvetica,sans-serif;color:#0B1B28}  
+.ukmc-sig a{color:#0B1B28;text-decoration:none}  
+.ukmc-sig .sig-name{font-size:18px;font-weight:700;line-height:1.2}  
+.ukmc-sig .sig-title{font-size:13px;color:#5f6d78;padding-top:2px}  
+.ukmc-sig .sig-company{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding-top:10px}  
+.ukmc-sig .sig-row{font-size:13px;padding-top:6px}  
+.ukmc-sig .sig-label{color:#8fd61a;font-weight:700}  
+.ukmc-sig .sig-bar{width:3px;background:#B7FF3C;border-radius:3px}  
+  
+@media(max-width:900px){.sig-grid{grid-template-columns:1fr}.sig-preview-wrap{position:static}.form-row{grid-template-columns:1fr}}  
+</style>  
+</head>  
+<body>  
+<header class="site-header">  
+  <div class="container nav">  
+    <a class="brand" href="#" aria-label="UK Merchant Capital">  
+      <svg class="brand-logo" viewBox="13 22 703 212" aria-hidden="true">  
+        <g fill="currentColor">  
+          <path d="M13 65h48v93c0 22 21 36 47.5 36s47.5-14 47.5-36V65h48v82l80-82h59l-82 83.5 81 85.5h-58.5L204 150v8c0 47-38 76-95.5 76S13 205 13 158z"/>  
+          <path d="M346 234V79l89 67.5v53l-42.5-31.8V234z"/>  
+          <path d="M487 234V135.6L534 97v137z"/>  
+          <path d="M716 64h-96c-48 0-82 38-82 85s34 85 82 85h96v-41h-86c-23 0-40-20-40-44s17-45 40-45h86z"/>  
+        </g>  
+        <g fill="#B7FF3C">  
+          <path d="M439.5 102.5L483 67v68l-43.5 37z"/>  
+          <path d="M488 61l46-38.3v65.8L488 128z"/>  
+        </g>  
+      </svg>  
+      <span class="brand-divider"></span>  
+      <span class="brand-name">UK Merchant<br>Capital</span>  
+    </a>  
+    <a class="text-link" href="#">Internal tool</a>  
+  </div>  
+</header>  
+  
+<main class="container sig-page">  
+  <div class="sig-head">  
+    <div class="eyebrow">Internal tool</div>  
+    <h1>Email signature <em>generator</em></h1>  
+    <p>Fill in your details, check the live preview, then copy your branded signature into Gmail or Outlook.</p>  
+  </div>  
+  
+  <div class="sig-grid">  
+    <form class="sig-form" novalidate>  
+      <div class="field">  
+        <label for="s-name">Full name</label>  
+        <input id="s-name" type="text" placeholder="Jane Smith" value="Jane Smith">  
+      </div>  
+      <div class="field">  
+        <label for="s-title">Job title</label>  
+        <input id="s-title" type="text" placeholder="Business Development Manager" value="Business Development Manager">  
+      </div>  
+      <div class="field">  
+        <label for="s-email">Email</label>  
+        <input id="s-email" type="email" placeholder="jane@ukmerchantcapital.com" value="jane@ukmerchantcapital.com">  
+      </div>  
+      <div class="form-row">  
+        <div class="field">  
+          <label for="s-phone">Phone <span class="optional">(optional)</span></label>  
+          <input id="s-phone" type="tel" placeholder="020 1234 5678">  
+        </div>  
+        <div class="field">  
+          <label for="s-mobile">Mobile <span class="optional">(optional)</span></label>  
+          <input id="s-mobile" type="tel" placeholder="07123 456789">  
+        </div>  
+      </div>  
+      <div class="field">  
+        <label for="s-website">Website</label>  
+        <input id="s-website" type="text" placeholder="ukmerchantcapital.com" value="ukmerchantcapital.com">  
+      </div>  
+    </form>  
+  
+    <div class="sig-preview-wrap">  
+      <div class="sig-preview-label">Live preview</div>  
+      <div class="sig-preview"><div id="sigOutput"></div></div>  
+      <div class="sig-actions">  
+        <button class="button button-lime" type="button" id="copyBtn">Copy signature <span aria-hidden="true">↗</span></button>  
+        <button class="button button-dark button-small" type="button" id="copyHtmlBtn">Copy HTML</button>  
+      </div>  
+      <div class="copied-flash" id="copiedFlash" hidden>Copied — paste it into your email client's signature settings.</div>  
+      <p class="copy-note">Gmail: Settings → See all settings → Signature → paste.<br>Outlook: File → Options → Mail → Signatures → paste.</p>  
+    </div>  
+  </div>  
+</main>  
+  
+<script>  
+// IMPORTANT: email clients won't render inline SVG — the logo must be a hosted PNG.  
+// Replace this with a public URL to a PNG export of the UKMC logo (~300px wide).  
+const LOGO_URL = "https://YOUR-DOMAIN/ukmc-logo.png";  
+  
+const fields = ["name","title","email","phone","mobile","website"];  
+const inputs = {};  
+fields.forEach(f => inputs[f] = document.getElementById("s-" + f));  
+  
+const esc = s => String(s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));  
+  
+function buildSignature() {  
+  const v = {};  
+  fields.forEach(f => v[f] = inputs[f].value.trim());  
+  const siteUrl = v.website.startsWith("http") ? v.website : "https://" + v.website;  
+  const contact = [];  
+  if (v.phone)  contact.push(`<span style="color:#8fd61a;font-weight:700">T</span> ${esc(v.phone)}`);  
+  if (v.mobile) contact.push(`<span style="color:#8fd61a;font-weight:700">M</span> ${esc(v.mobile)}`);  
+  
+  return `<table class="ukmc-sig" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif">  
+<tr>  
+  <td style="padding-right:18px;vertical-align:top">  
+    <img src="${LOGO_URL}" alt="UK Merchant Capital" width="150" style="display:block;width:150px;height:auto">  
+  </td>  
+  <td style="width:3px;background:#B7FF3C;border-radius:3px;padding:0"></td>  
+  <td style="padding-left:18px;vertical-align:top">  
+    <div style="font-size:18px;font-weight:700;color:#0B1B28;line-height:1.2">${esc(v.name)}</div>  
+    <div style="font-size:13px;color:#5f6d78;padding-top:2px">${esc(v.title)}</div>  
+    <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0B1B28;padding-top:10px">UK Merchant Capital</div>  
+    ${contact.length ? `<div style="font-size:13px;color:#0B1B28;padding-top:6px">${contact.join('&nbsp;&nbsp;·&nbsp;&nbsp;')}</div>` : ""}  
+    ${v.email ? `<div style="font-size:13px;padding-top:6px"><span style="color:#8fd61a;font-weight:700">E</span> <a href="mailto:${esc(v.email)}" style="color:#0B1B28;text-decoration:none">${esc(v.email)}</a></div>` : ""}  
+    ${v.website ? `<div style="font-size:13px;padding-top:6px"><a href="${esc(siteUrl)}" style="color:#8fd61a;font-weight:700;text-decoration:none">${esc(v.website)}</a></div>` : ""}  
+  </td>  
+</tr>  
+</table>`;  
+}  
+  
+function render(){ document.getElementById("sigOutput").innerHTML = buildSignature(); }  
+fields.forEach(f => inputs[f].addEventListener("input", render));  
+render();  
+  
+const flash = document.getElementById("copiedFlash");  
+function showFlash(){ flash.hidden = false; setTimeout(() => flash.hidden = true, 4000); }  
+  
+document.getElementById("copyBtn").addEventListener("click", async () => {  
+  const html = buildSignature();  
+  try {  
+    await navigator.clipboard.write([new ClipboardItem({  
+      "text/html": new Blob([html], { type: "text/html" }),  
+      "text/plain": new Blob([document.getElementById("sigOutput").innerText], { type: "text/plain" })  
+    })]);  
+  } catch {  
+    const range = document.createRange();  
+    range.selectNode(document.getElementById("sigOutput"));  
+    const sel = window.getSelection();  
+    sel.removeAllRanges(); sel.addRange(range);  
+    document.execCommand("copy");  
+    sel.removeAllRanges();  
+  }  
+  showFlash();  
+});  
+  
+document.getElementById("copyHtmlBtn").addEventListener("click", async () => {  
+  await navigator.clipboard.writeText(buildSignature().trim());  
+  showFlash();  
+});  
+</script>  
+</body>  
+</html>
