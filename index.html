@@ -20,7 +20,6 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Ari
 h1{font-family:Manrope,Arial,sans-serif;font-weight:800;letter-spacing:-.03em;margin:0}  
 h1 em{font-style:normal;color:var(--lime-dark)}  
   
-/* Header */  
 .site-header{background:var(--navy);padding:18px 0}  
 .nav{display:flex;align-items:center;justify-content:space-between}  
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none}  
@@ -29,7 +28,6 @@ h1 em{font-style:normal;color:var(--lime-dark)}
 .brand-name{font-family:Manrope;font-weight:800;font-size:13px;line-height:1.15;color:#fff;letter-spacing:.02em}  
 .text-link{color:var(--lime);font-size:14px;font-weight:700;text-decoration:none}  
   
-/* Layout */  
 .sig-page{padding:60px 0 100px}  
 .sig-head{max-width:680px;margin-bottom:40px}  
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#45525c;margin-bottom:16px}  
@@ -38,7 +36,6 @@ h1 em{font-style:normal;color:var(--lime-dark)}
 .sig-head p{color:var(--muted);font-size:17px;line-height:1.6;margin:0}  
 .sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}  
   
-/* Form */  
 .sig-form{background:#fff;border-radius:26px;padding:32px;box-shadow:var(--shadow);border:1px solid var(--line)}  
 .field{margin-bottom:15px}  
 .field label{display:block;font-size:11px;font-weight:800;color:#45525c;text-transform:uppercase;letter-spacing:1px}  
@@ -47,7 +44,6 @@ input{width:100%;border:1px solid #d6dfe2;background:#f8fbfa;border-radius:10px;
 input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(183,255,60,.35)}  
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}  
   
-/* Buttons */  
 .button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:52px;padding:0 22px;border-radius:999px;font-size:14px;font-weight:700;font-family:inherit;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}  
 .button:hover{transform:translateY(-2px)}  
 .button span{font-size:17px}  
@@ -55,7 +51,6 @@ input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(1
 .button-dark{background:var(--navy);color:#fff}  
 .button-small{min-height:44px;padding:0 18px}  
   
-/* Preview */  
 .sig-preview-wrap{position:sticky;top:40px}  
 .sig-preview-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#45525c;margin-bottom:12px}  
 .sig-preview{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow);min-height:160px;overflow-x:auto}  
@@ -64,23 +59,13 @@ input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(1
 .copied-flash{margin-top:12px;background:#eefbd9;color:#2f4d12;padding:12px 14px;border-radius:12px;font-size:13px;font-weight:600}  
 .copied-flash[hidden]{display:none}  
   
-/* Signature preview styling (mirrors the inline styles in generated markup) */  
-.ukmc-sig{font-family:Arial,Helvetica,sans-serif;color:#0B1B28}  
-.ukmc-sig a{color:#0B1B28;text-decoration:none}  
-.ukmc-sig .sig-name{font-size:18px;font-weight:700;line-height:1.2}  
-.ukmc-sig .sig-title{font-size:13px;color:#5f6d78;padding-top:2px}  
-.ukmc-sig .sig-company{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding-top:10px}  
-.ukmc-sig .sig-row{font-size:13px;padding-top:6px}  
-.ukmc-sig .sig-label{color:#8fd61a;font-weight:700}  
-.ukmc-sig .sig-bar{width:3px;background:#B7FF3C;border-radius:3px}  
-  
 @media(max-width:900px){.sig-grid{grid-template-columns:1fr}.sig-preview-wrap{position:static}.form-row{grid-template-columns:1fr}}  
 </style>  
 </head>  
 <body>  
 <header class="site-header">  
   <div class="container nav">  
-    <a class="brand" href="#" aria-label="UK Merchant Capital">  
+    <a class="brand" href="https://ukmerchantcapital.co.uk" aria-label="UK Merchant Capital">  
       <svg class="brand-logo" viewBox="13 22 703 212" aria-hidden="true">  
         <g fill="currentColor">  
           <path d="M13 65h48v93c0 22 21 36 47.5 36s47.5-14 47.5-36V65h48v82l80-82h59l-82 83.5 81 85.5h-58.5L204 150v8c0 47-38 76-95.5 76S13 205 13 158z"/>  
@@ -119,7 +104,7 @@ input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(1
       </div>  
       <div class="field">  
         <label for="s-email">Email</label>  
-        <input id="s-email" type="email" placeholder="jane@ukmerchantcapital.com" value="jane@ukmerchantcapital.com">  
+        <input id="s-email" type="email" placeholder="jane@ukmerchantcapital.co.uk" value="jane@ukmerchantcapital.co.uk">  
       </div>  
       <div class="form-row">  
         <div class="field">  
@@ -130,10 +115,6 @@ input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(1
           <label for="s-mobile">Mobile <span class="optional">(optional)</span></label>  
           <input id="s-mobile" type="tel" placeholder="07123 456789">  
         </div>  
-      </div>  
-      <div class="field">  
-        <label for="s-website">Website</label>  
-        <input id="s-website" type="text" placeholder="ukmerchantcapital.com" value="ukmerchantcapital.com">  
       </div>  
     </form>  
   
@@ -151,11 +132,28 @@ input:focus{border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(1
 </main>  
   
 <script>  
-// IMPORTANT: email clients won't render inline SVG — the logo must be a hosted PNG.  
-// Replace this with a public URL to a PNG export of the UKMC logo (~300px wide).  
-const LOGO_URL = "https://YOUR-DOMAIN/ukmc-logo.png";  
+// UKMC logo baked in as an SVG data URI — no separate image file needed for the site.  
+// NOTE: some email clients (older Outlook) won't render SVG. If signatures arrive  
+// without a logo, host a PNG and set PNG_URL below to its public URL.  
+const PNG_URL = ""; // e.g. "https://ukmerchantcapital.co.uk/ukmc-logo.png"  
   
-const fields = ["name","title","email","phone","mobile","website"];  
+const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="13 22 703 212">  
+<g fill="#0B1B28">  
+<path d="M13 65h48v93c0 22 21 36 47.5 36s47.5-14 47.5-36V65h48v82l80-82h59l-82 83.5 81 85.5h-58.5L204 150v8c0 47-38 76-95.5 76S13 205 13 158z"/>  
+<path d="M346 234V79l89 67.5v53l-42.5-31.8V234z"/>  
+<path d="M487 234V135.6L534 97v137z"/>  
+<path d="M716 64h-96c-48 0-82 38-82 85s34 85 82 85h96v-41h-86c-23 0-40-20-40-44s17-45 40-45h86z"/>  
+</g>  
+<g fill="#B7FF3C">  
+<path d="M439.5 102.5L483 67v68l-43.5 37z"/>  
+<path d="M488 61l46-38.3v65.8L488 128z"/>  
+</g></svg>`;  
+  
+const LOGO_URL = PNG_URL || "data:image/svg+xml;charset=utf-8," + encodeURIComponent(LOGO_SVG);  
+const CTA_URL = "https://ukmerchantcapital.co.uk";  
+const CTA_TEXT = "Get a funding estimate";  
+  
+const fields = ["name","title","email","phone","mobile"];  
 const inputs = {};  
 fields.forEach(f => inputs[f] = document.getElementById("s-" + f));  
   
@@ -164,24 +162,29 @@ const esc = s => String(s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 function buildSignature() {  
   const v = {};  
   fields.forEach(f => v[f] = inputs[f].value.trim());  
-  const siteUrl = v.website.startsWith("http") ? v.website : "https://" + v.website;  
   const contact = [];  
-  if (v.phone)  contact.push(`<span style="color:#8fd61a;font-weight:700">T</span> ${esc(v.phone)}`);  
-  if (v.mobile) contact.push(`<span style="color:#8fd61a;font-weight:700">M</span> ${esc(v.mobile)}`);  
+  if (v.phone)  contact.push(`<span style="color:#8fd61a;font-weight:700">T</span>&nbsp;${esc(v.phone)}`);  
+  if (v.mobile) contact.push(`<span style="color:#8fd61a;font-weight:700">M</span>&nbsp;${esc(v.mobile)}`);  
+  if (v.email)  contact.push(`<a href="mailto:${esc(v.email)}" style="color:#0B1B28;text-decoration:none">${esc(v.email)}</a>`);  
   
-  return `<table class="ukmc-sig" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif">  
+  return `<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif">  
 <tr>  
-  <td style="padding-right:18px;vertical-align:top">  
+  <td style="padding-right:18px;vertical-align:middle">  
     <img src="${LOGO_URL}" alt="UK Merchant Capital" width="150" style="display:block;width:150px;height:auto">  
   </td>  
   <td style="width:3px;background:#B7FF3C;border-radius:3px;padding:0"></td>  
-  <td style="padding-left:18px;vertical-align:top">  
+  <td style="padding-left:18px;vertical-align:middle">  
     <div style="font-size:18px;font-weight:700;color:#0B1B28;line-height:1.2">${esc(v.name)}</div>  
     <div style="font-size:13px;color:#5f6d78;padding-top:2px">${esc(v.title)}</div>  
-    <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0B1B28;padding-top:10px">UK Merchant Capital</div>  
+    <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0B1B28;padding-top:8px">UK Merchant Capital</div>  
     ${contact.length ? `<div style="font-size:13px;color:#0B1B28;padding-top:6px">${contact.join('&nbsp;&nbsp;·&nbsp;&nbsp;')}</div>` : ""}  
-    ${v.email ? `<div style="font-size:13px;padding-top:6px"><span style="color:#8fd61a;font-weight:700">E</span> <a href="mailto:${esc(v.email)}" style="color:#0B1B28;text-decoration:none">${esc(v.email)}</a></div>` : ""}  
-    ${v.website ? `<div style="font-size:13px;padding-top:6px"><a href="${esc(siteUrl)}" style="color:#8fd61a;font-weight:700;text-decoration:none">${esc(v.website)}</a></div>` : ""}  
+    <div style="padding-top:10px">  
+      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse"><tr>  
+        <td style="background:#B7FF3C;border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700">  
+          <a href="${CTA_URL}" style="color:#0B1B28;text-decoration:none">${CTA_TEXT} &#8599;</a>  
+        </td>  
+      </tr></table>  
+    </div>  
   </td>  
 </tr>  
 </table>`;  
